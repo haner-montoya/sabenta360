@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}Comercios{% endblock %}
+
+{% block contenido %}
+
+{% load static %}
+
+    {% for item in object_list %}
+        {{item}}
+    {% endfor %}
+
+{% endblock %}
