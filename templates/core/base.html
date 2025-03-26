@@ -14,8 +14,13 @@
     />
   </head>
   <body>
+      
     {% include 'core/menu.html' %}
+
     {% block contenido %}{% endblock %}
+
+    {% include 'core/footer.html' %}
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
