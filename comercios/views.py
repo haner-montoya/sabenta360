@@ -7,4 +7,5 @@ from .models import Comercio
 class ComercioListview(ListView):
     template_name = 'comercios/catalogo.html'
     model = Comercio
+    context_object_name = 'comercios'
 

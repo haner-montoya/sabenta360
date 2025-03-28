@@ -2,6 +2,6 @@ Categorias = [
     (("Restaurantes"),("Restaurantes")),
     (("Salud"),("Salud")),
     (("Belleza"),("Belleza")),
-    (("Belleza"),("Belleza")),
+    (("Moda"),("Moda")),
     (("Entretenimiento"),("Entretenimiento")),
 ]
