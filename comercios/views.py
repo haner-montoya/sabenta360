@@ -9,3 +9,25 @@ class ComercioListview(ListView):
     model = Comercio
     context_object_name = 'comercios'
 
+
+class RestaurantesListview(ListView):
+    template_name = 'comercios/restaurantes.html'
+    model = Comercio
+    context_object_name = 'comercios'
+
+    def get_queryset(self):
+        filtro = 'Restaurantes'
+        categoria = Comercio.objects.filter(categoria = filtro)
+
+        return categoria
+
+class ModaListview(ListView):
+    template_name = 'comercios/moda.html'
+    model = Comercio
+    context_object_name = 'comercios'
+
+    def get_queryset(self):
+        filtro = 'Moda'
+        categoria = Comercio.objects.filter(categoria = filtro)
+
+        return categoria
