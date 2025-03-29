@@ -31,3 +31,14 @@ class ModaListview(ListView):
         categoria = Comercio.objects.filter(categoria = filtro)
 
         return categoria
+    
+    # class BellezaListview(ListView):
+    # template_name = 'comercios/belleza.html'
+    # model = Comercio
+    # context_object_name = 'comercios'
+
+    # def get_queryset(self):
+    #     filtro = 'Belleza'
+    #     categoria = Comercio.objects.filter(categoria = filtro)
+
+    #     return categoria
