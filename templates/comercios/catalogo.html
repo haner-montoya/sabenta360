@@ -2,6 +2,7 @@
 {% extends 'core/base.html' %}
 
 {% block titulo %}Comercios{% endblock %}
+{% block titulo %}Comercios{% endblock %}
 
 {% block contenido %}
 
@@ -27,10 +28,33 @@
                         </div>
                     </div>
         
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+            {% for item in comercios %}
+                <div class="col">
+                    <div class="card">
+                    <img src="{{ item.imagen.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.nombre_comercio }}</h5>
+                        <p class="card-text">Teléfono: {{item.telefono}}</p>
+                        <p class="card-text">Dirección: {{item.direccion}}</p>
+                        <p class="card-text">Correo electrónico: {{item.email}}</p>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row justify-content-between">
+                            <button type="button" class="btn btn-secondary btn-sm col-md-4">{{ item.categoria }}</button>
+                            <a target="_blank" class="btn btn-tertiary btn-sm col-md-6" href="https://maps.app.goo.gl/Zgy1NuegNU6XbMvy9">Ver Mapa</a>
+                        </div>
+                    </div>
+        
                     </div>
                 </div>
             {% endfor %}    
+            {% endfor %}    
         </div>
+        
+    </section>   
         
     </section>   
 
