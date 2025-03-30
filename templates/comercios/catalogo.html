@@ -1,54 +1,37 @@
+
 {% extends 'core/base.html' %}
 
-{% block titulo %}Registrar Comercio{% endblock %}
+{% block titulo %}Comercios{% endblock %}
 
 {% block contenido %}
 
 {% load static %}
 
-    <section class="container mt-2">
-        <div class="row">
-            <h2 class="text-center">Registro de Comercio</h2>
-            <form action="" method="post" class="row" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="col-md-6 mt-3 mb-2">
-                    <label for="">Categoria</label>
-                    {{ form.non_field_errors }}
-                    {{ form.categoria }}
-                </div>
-                <div class="col-md-6 mt-3 mb-2">
-                    <label for="">Nombre de tu Comercio</label>
-                    {{ form.non_field_errors }}
-                    {{ form.nombre_comercio }}
-                </div>
-                <div class="col-md-6 mt-3 mb-2">
-                    <label for="">Direccion</label>
-                    {{ form.non_field_errors }}
-                    {{ form.direccion }}
-                </div>
-                <div class="col-md-6 mt-3 mb-2">
-                    <label for="">Teléfono</label>
-                    {{ form.non_field_errors }}
-                    {{ form.telefono }}
-                </div>
-                <div class="col-md-6 mt-3 mb-2">
-                    <label for="">Correo Electrónico</label>
-                    {{ form.non_field_errors }}
-                    {{ form.email }}
-                </div>
-                <div class="col-md-6 mt-3 mb-2">
-                    <label for="">Imagen</label>
-                    {{ form.non_field_errors }}
-                    {{ form.imagen }}
-                </div>
-                <div class="row justify-content-end">
-                    <div class="col-md-4">
-                        <button class="btn btn-danger mt-3 mb-2" type="reset">Cancelar</button>
-                        <button type="submit" class="btn btn-success mt-3 mb-2">Registrar Comercio</button>
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+            {% for item in comercios %}
+                <div class="col">
+                    <div class="card">
+                    <img src="{{ item.imagen.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.nombre_comercio }}</h5>
+                        <p class="card-text">Teléfono: {{item.telefono}}</p>
+                        <p class="card-text">Dirección: {{item.direccion}}</p>
+                        <p class="card-text">Correo electrónico: {{item.email}}</p>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row justify-content-between">
+                            <button type="button" class="btn btn-secondary btn-sm col-md-4">{{ item.categoria }}</button>
+                            <a target="_blank" class="btn btn-tertiary btn-sm col-md-6" href="https://maps.app.goo.gl/Zgy1NuegNU6XbMvy9">Ver Mapa</a>
+                        </div>
+                    </div>
+        
                     </div>
                 </div>
-            </form>
+            {% endfor %}    
         </div>
-    </section>
+        
+    </section>   
 
 {% endblock %}
