@@ -11,7 +11,7 @@
             {% for item in comercios %}
                 <div class="col">
                     <div class="card">
-                    <img src="../static{{ item.imagen.url }}" class="card-img-top" alt="...">
+                    <img src="{{ item.imagen.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.nombre_comercio }}</h5>
                         <p class="card-text">Teléfono: {{item.telefono}}</p>
