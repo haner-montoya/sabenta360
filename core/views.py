@@ -25,3 +25,4 @@ class AcercaPageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
+
