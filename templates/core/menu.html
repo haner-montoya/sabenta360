@@ -37,9 +37,9 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="{% url 'restaurantes' %}">Restaurantes</a></li>
-                  <li><a class="dropdown-item" href="#">Salud</a></li>
-                  <li><a class="dropdown-item" href="#">Belleza</a></li>
-                  <li><a class="dropdown-item" href="#">Entretenimiento</a></li>
+                  <li><a class="dropdown-item" href="{% url 'Salud' %}">Salud</a></li>
+                  <li><a class="dropdown-item" href="{% url 'Belleza' %}">Belleza</a></li>
+                  <li><a class="dropdown-item" href="{% url 'Entretenimiento' %}">Entretenimiento</a></li>
                   <li><a class="dropdown-item" href="{% url 'Moda' %}">Moda</a></li>
                 </ul>
               </li>
@@ -48,6 +48,9 @@
               </li> -->
               <li class="nav-item">
                 <a class="nav-link active text-light" href="{% url 'nosotros' %}">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light" href="{% url 'acerca' %}">Acerca de</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active text-light" href="{% url 'registro_comercio' %}">Registre su negocio</a>

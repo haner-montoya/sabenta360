@@ -50,14 +50,36 @@ class ModaListview(ListView):
         categoria = Comercio.objects.filter(categoria = filtro)
 
         return categoria
+
+class BellezaListview(ListView):
+    template_name = 'comercios/belleza.html'
+    model = Comercio
+    context_object_name = 'comercios'
+
+    def get_queryset(self):
+        filtro = 'Belleza'
+        categoria = Comercio.objects.filter(categoria = filtro)
+
+        return categoria
     
-    # class BellezaListview(ListView):
-    # template_name = 'comercios/belleza.html'
-    # model = Comercio
-    # context_object_name = 'comercios'
+class EntretenimientoListview(ListView):
+    template_name = 'comercios/entretenimiento.html'
+    model = Comercio
+    context_object_name = 'comercios'
 
-    # def get_queryset(self):
-    #     filtro = 'Belleza'
-    #     categoria = Comercio.objects.filter(categoria = filtro)
+    def get_queryset(self):
+        filtro = 'Entretenimiento'
+        categoria = Comercio.objects.filter(categoria = filtro)
 
-    #     return categoria
+        return categoria
+
+class SaludListview(ListView):
+    template_name = 'comercios/salud.html'
+    model = Comercio
+    context_object_name = 'comercios'
+
+    def get_queryset(self):
+        filtro = 'Salud'
+        categoria = Comercio.objects.filter(categoria = filtro)
+
+        return categoria

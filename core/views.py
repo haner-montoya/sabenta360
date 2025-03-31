@@ -19,3 +19,9 @@ class NosotrosPageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
+    
+class AcercaPageView(TemplateView):
+    template_name = 'core/acerca.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)

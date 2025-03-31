@@ -5,7 +5,73 @@
 {% block titulo %}Nosotros{% endblock %}
 
 {% block contenido %}
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur amet explicabo saepe voluptatibus, placeat molestias distinctio rem architecto officia illo nostrum, pariatur, aliquid beatae veritatis commodi facilis aspernatur. Aut, quae.
+<section class="container my-5">
+  <h2 class="text-center mb-4">Nuestra Misión y Visión</h2>
+  <div class="row">
+      <div class="col-md-6 mb-4">
+          <div class="p-4 bg-white rounded shadow-lg">
+              <h3 class="text-center">Misión</h3>
+              <p>Brindar información comercial organizada y de fácil acceso para los habitantes de Sabaneta, facilitando la conexión entre negocios locales y la comunidad, promoviendo el crecimiento económico y la identidad cultural del municipio.</p>
+          </div>
+      </div>
+      <div class="col-md-6 mb-4">
+          <div class="p-4 bg-white rounded shadow-lg">
+              <h3 class="text-center">Visión</h3>
+              <p>Ser la plataforma de referencia para el directorio comercial de Sabaneta, innovando constantemente en la presentación y accesibilidad de la información, contribuyendo al desarrollo sostenible del comercio local.</p>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="container my-5 text-center">
+  <img src="{% static 'media/img/nosotros.jpeg' %}" class="img-fluid rounded w-400" alt="Imagen de nosotros" style="max-height: 500px;">
+</section>
+  <section class="container my-5">
+      <h2 class="text-center mb-4">Conoce a nuestro equipo</h2>
+      <div class="row">
+          <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm">
+                  <img src="{% static 'media/img/camila.png' %}" class="rounded-circle me-3" width="150" height="150" alt="Miembro 1">
+                  <div>
+                      <h4>Angie Camila Arboleda Grisales</h4>
+                      <p>Soy diseñadora y desarrolladora web con formación en tecnología. Trabajo en una empresa de cosméticos, donde aplico mi creatividad. Amante de la comida dulce y los postres.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm">
+                  <img src="{% static 'media/img/haner.jpeg' %}" class="rounded-circle me-3" width="150" height="150" alt="Miembro 2">
+                  <div>
+                      <h4>Haner Montoya</h4>
+                      <p>Estudiante de Desarrollo de Softwarem del SENA.
+                        Abierto siempre a aprender y a mejorar mis habilidades. Me gusta la música, el cine y la tecnología. Me apasiona el desarrollo web y la programación.</p>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm">
+                  <img src="{% static 'media/img/ahider.jpeg' %}" class="rounded-circle me-3" width="150" height="150" alt="Miembro 3">
+                  <div>
+                      <h4>Ahider Albeiro Guerra Montoya</h4>
+                      <p>Chef desde 2007 y licenciado en Ciencias Sociales desde 2015. Me apasiona explorar la fusión entre el arte y la ciencia, donde creo que sucede la verdadera magia.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm">
+                  <img src="{% static 'media/img/angel.jpeg' %}" class="rounded-circle me-3" width="150" height="150" alt="Miembro 3">
+                  <div>
+                      <h4>Angel Amaru Castellanos</h4>
+                      <p>Curioso intelectual por naturaleza. Me gusta dibujar
+                      y aprender sobre diferentes temas. Me apasiona la tecnología y la programación. Siempre busco aprender algo nuevo cada día.</p>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+  </section>
 
   {% load static %}
 {% endblock %}
