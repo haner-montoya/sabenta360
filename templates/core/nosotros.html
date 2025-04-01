@@ -6,24 +6,25 @@
 
 {% block contenido %}
 <section class="container my-5">
-  <h2 class="text-center mb-4 text-dark">Nuestra Misión y Visión</h2>
+  <h2 class="text-center mb-4 text-dark" style="font-weight: bold;">Nuestra Misión y Visión</h2>
   <div class="row">
-      <div class="col-md-6 mb-4">
-          <div class="p-4 bg-white rounded shadow-lg">
-              <h3 class="text-center">Misión</h3>
-              <p>Brindar información comercial organizada y de fácil acceso para los habitantes de Sabaneta, facilitando la conexión entre negocios locales y la comunidad, promoviendo el crecimiento económico y la identidad cultural del municipio.</p>
-          </div>
+    <div class="col-md-6 mb-4">
+      <div class="p-4 rounded shadow-lg" style="background: linear-gradient(135deg, #e0f7fa, #ffffff);">
+        <h3 class="text-center">Misión</h3>
+        <p>Brindar información comercial organizada y de fácil acceso para los habitantes de Sabaneta, facilitando la conexión entre negocios locales y la comunidad, promoviendo el crecimiento económico y la identidad cultural del municipio.</p>
       </div>
-      <div class="col-md-6 mb-4">
-          <div class="p-4 bg-white rounded shadow-lg">
-              <h3 class="text-center">Visión</h3>
-              <p>Ser la plataforma de referencia para el directorio comercial de Sabaneta, innovando constantemente en la presentación y accesibilidad de la información, contribuyendo al desarrollo sostenible del comercio local.</p>
-          </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="p-4 rounded shadow-lg" style="background: linear-gradient(135deg, #e8f5e9, #ffffff);">
+        <h3 class="text-center">Visión</h3>
+        <p>Ser la plataforma de referencia para el directorio comercial de Sabaneta, innovando constantemente en la presentación y accesibilidad de la información, contribuyendo al desarrollo sostenible del comercio local.</p>
       </div>
+    </div>
   </div>
 </section>
+
 <section class="container my-5 text-center">
-  <img src="{% static 'media/img/nosotros.jpeg' %}" class="img-fluid rounded w-400" alt="Imagen de nosotros" style="max-height: 500px;">
+  <img src="{% static 'media/img/nosotros.jpeg' %}" class="img-fluid rounded shadow-lg" alt="Imagen de nosotros" style="max-height: 500px; transition: transform 0.3s ease;">
 </section>
   <section class="container my-5">
       <h2 class="text-center mb-4 text-dark">Conoce a nuestro equipo</h2>
@@ -34,6 +35,14 @@
                   <div>
                       <h4>Angie Camila Arboleda Grisales</h4>
                       <p>Amante de los gatos. Trabajo en Prebel S.A en el área de E-commerce, donde aplico mi creatividad en mi dia a dia. Amante de la comida dulce y los postres.</p>
+                    <div>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin" style="font-size: 2rem; color: #0A63BC; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-x" style="font-size: 2rem; color: #000000; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-facebook" style="font-size: 2rem; color: #0866FF; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-instagram" style="font-size: 2rem; color: #FD0FA2; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                    </div>
+                    
+                    
                   </div>
               </div>
           </div>
@@ -41,9 +50,15 @@
               <div class="d-flex align-items-center bg-white p-3 rounded shadow-lg">
                   <img src="{% static 'media/img/haner.jpeg' %}" class="rounded-circle me-3" width="150" height="150" alt="Miembro 2">
                   <div>
-                      <h4>Haner Montoya</h4>
+                      <h4>Haner Mauricio Montoya Aguinaga</h4>
                       <p>Estudiante de Desarrollo de Softwarem del SENA.
                         Abierto siempre a aprender y a mejorar mis habilidades. Me gusta la música, el cine y la tecnología. Me apasiona el desarrollo web y la programación.</p>
+                        <div>
+                            <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin" style="font-size: 2rem; color: #0A63BC; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="fab fa-x" style="font-size: 2rem; color: #000000; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="fab fa-facebook" style="font-size: 2rem; color: #0866FF; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                            <a href="#" class="text-dark mx-2"><i class="fab fa-instagram" style="font-size: 2rem; color: #FD0FA2; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        </div>             
                       </p>
                   </div>
               </div>
@@ -55,6 +70,14 @@
                       <h4>Ahider Albeiro Guerra Montoya</h4>
                       <p>Chef desde 2007 y licenciado en Ciencias Sociales desde 2015. Me apasiona explorar la fusión entre el arte y la ciencia, donde creo que sucede la verdadera magia.
                       </p>
+                      <div>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin" style="font-size: 2rem; color: #0A63BC; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-x" style="font-size: 2rem; color: #000000; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-facebook" style="font-size: 2rem; color: #0866FF; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-instagram" style="font-size: 2rem; color: #FD0FA2; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                    </div>
+                    
+                    
                   </div>
               </div>
           </div>
@@ -65,6 +88,14 @@
                       <h4>Angel Amaru Castellanos</h4>
                       <p>Curioso intelectual por naturaleza. Me gusta dibujar
                       y aprender sobre diferentes temas. Me apasiona la tecnología y la programación. Siempre busco aprender algo nuevo cada día.</p>
+                      <div>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin" style="font-size: 2rem; color: #0A63BC; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-x" style="font-size: 2rem; color: #000000; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-facebook" style="font-size: 2rem; color: #0866FF; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="fab fa-instagram" style="font-size: 2rem; color: #FD0FA2; transition: transform 0.3s ease, color 0.3s ease;"></i></a>
+                    </div>
+                    
+                    
                       </p>
                   </div>
               </div>

@@ -7,38 +7,42 @@
 
 {% load static %}
 
-<section class="container mt-2">
+<section class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+            <img src="{% static 'media/img/logo2.png' %}" alt="" class="img-fluid" style="width: 180px; height: 180px;">
+        </div>
     <div class="row">
-        <h2 class="text-center">Registro de Comercio</h2>
+        <h2 class="text-center text-dark mt-3 mb-4" style="font-weight: bold; letter-spacing: 1px;">Registro de Comercio</h2>
         <form action="" method="post" class="row" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="col-md-6 mt-3 mb-2">
-                <label for="">Categoria</label>
+                <label for="" class="form-label text-dark" style="font-weight: bold;">Categoria</label>
                 {{ form.non_field_errors }}
                 {{ form.categoria }}
             </div>
             <div class="col-md-6 mt-3 mb-2">
-                <label for="">Nombre de tu Comercio</label>
+                <label for="" class="form-label text-dark" style="font-weight: bold;">Nombre de tu Comercio</label>
                 {{ form.non_field_errors }}
                 {{ form.nombre_comercio }}
             </div>
             <div class="col-md-6 mt-3 mb-2">
-                <label for="">Direccion</label>
+                <label for="" class="form-label text-dark" style="font-weight: bold;">Dirección</label>
                 {{ form.non_field_errors }}
                 {{ form.direccion }}
             </div>
             <div class="col-md-6 mt-3 mb-2">
-                <label for="">Teléfono</label>
+                <label for="" class="form-label text-dark" style="font-weight: bold;">Teléfono</label>
                 {{ form.non_field_errors }}
                 {{ form.telefono }}
             </div>
             <div class="col-md-6 mt-3 mb-2">
-                <label for="">Correo Electrónico</label>
+                <label for="" class="form-label text-dark" style="font-weight: bold;">Correo Electrónico</label>
                 {{ form.non_field_errors }}
                 {{ form.email }}
             </div>
             <div class="col-md-6 mt-3 mb-2">
-                <label for="">Imagen</label>
+                <label for="" class="form-label text-dark" style="font-weight: bold;">Imagen</label>
                 {{ form.non_field_errors }}
                 {{ form.imagen }}
             </div>

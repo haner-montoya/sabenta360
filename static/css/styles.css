@@ -1,15 +1,7 @@
-body {
-    background-image: url(../img/fondo.jpg); 
-    background-size: cover;
-    background-position: center;
-    color: #fff; 
-}
-
-.card {
-    background-color: rgba(0, 0, 0, 0.7); 
-    border-radius: 15px; 
-}
-
-h2 {
-    color: #FFD700; 
+#carouselExampleCaptions {
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    color: white; /* Texto blanco para contraste */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para que el texto resalte */
 }

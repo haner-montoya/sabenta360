@@ -7,47 +7,110 @@
 {% block contenido %}
 
   {% load static %}
-    <section class="container mt-4">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <section class="container mt-4">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{% static 'media/img/1.jpeg' %}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>¿Qué comerás hoy?</h1>
-              <p>Encuentra todos los restaurantes y "comederos" de Sabaneta en un solo lugar!</p>
+            <div class="carousel-item active">
+                <img src="{% static 'media/img/1.jpeg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block enhanced-caption">
+                    <h1>¿Qué comerás hoy?</h1>
+                    <p>Encuentra todos los restaurantes y "comederos" de Sabaneta AQUI!</p>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="{% static 'media/img/2.jpeg' %}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Sabaneta 360</h1>
-              <p class="banner-text" 
-            >Sabaneta en un solo lugar</p>
+            <div class="carousel-item">
+                <img src="{% static 'media/img/2.jpeg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block enhanced-caption">
+                    <h1>Sabaneta 360</h1>
+                    <p>Todo lo que necesites de Sabaneta, en un solo lugar</p>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="{% static 'media/img/4.jpg' %}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Registrate</h1>
-              <p class="text-dark">Registra tu negocio y sé visible para toda la comunidad</p>
+            <div class="carousel-item">
+                <img src="{% static 'media/img/4.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block enhanced-caption">
+                    <h1>Regístrate</h1>
+                    <p>Registra tu negocio y sé visible para toda la comunidad</p>
+                </div>
             </div>
-          </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
-        
+    </div>
+
+    <style>
+.enhanced-caption {
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px;          
+    padding: 15px;                
+    text-align: center;           
+}
+
+.enhanced-caption h1 {
+    font-size: 3rem;              
+    font-weight: bold;             
+    color: #e47310;                
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+}
+
+.enhanced-caption p {
+    font-size: 1.5rem;             
+    color: #ffffff;               
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+    margin-top: 10px;
+}
+
+    </style>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center mb-4" style="color: #e47310; font-weight: bold;">Sabaneta Emprende</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'media/img/emprendedor.jpg' %}" alt="Noticia 1" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Innovación en el sector tecnológico</h5>
+                    <p class="card-text">Un emprendedor local ha desarrollado una app que conecta negocios de Sabaneta con compradores en tiempo real.</p>
+                    <a href="#" class="btn btn-success">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'media/img/emprendedor2.jpg' %}" alt="Noticia 2" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Éxito en gastronomía</h5>
+                    <p class="card-text">Un chef sabaneteño ha llevado su restaurante a nivel internacional con recetas tradicionales únicas.</p>
+                    <a href="#" class="btn btn-success">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'media/img/emprendedor3.jpg' %}" alt="Noticia 3" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Crecimiento en el sector moda</h5>
+                    <p class="card-text">Las boutiques locales han comenzado a exportar diseños exclusivos a otros países.
+                      Descrubre más.
+                    </p>
+                    <a href="#" class="btn btn-success">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2 class="text-center mb-4" style="color: #e47310; font-weight: bold;">Nuestros aliados</h2>
         <div class="container my-4">
           <div class="row">
               <div class="col-4 mb-5"> 
@@ -75,7 +138,7 @@
                       <img src="{% static 'media/img/moda.jpeg' %}" alt="Tiendas de ropa" class="card-img-top">
                       <div class="card-body">
                           <h5 class="card-title">Tiendas de ropa</h5>
-                          <p class="text">Expresa tu estilo con las tiendas y boutiques de moda que encontrarás en nuestro directorio. <br> <br> Ya sea que busques ropa casual, accesorios o la última tendencia, aquí tienes todo lo necesario para que tu look siempre refleje tu esencia.</p>
+                          <p class="text">Expresa tu estilo con las tiendas y boutiques de moda que encontrarás en nuestro directorio. <br>Ya sea que busques ropa casual, accesorios o la última tendencia, aquí tienes todo lo necesario para que tu look siempre refleje tu esencia.</p>
                           <a href="" class="btn btn-success">Saber más</a>
                       </div>
                   </div>      

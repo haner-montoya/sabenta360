@@ -1,63 +1,62 @@
 <header>
-    {% load static %}
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #07852e;">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center me-2" href="{% url 'inicio' %}"
-            ><img
-              src="{% static 'media/img/logo2.png' %}"
-              class="d-flex mx-3"
-              style="width: 80px; height: 80px"
-          /></a>
-          <h4 class="text-light m-0">SABANETA 360</h4>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="d-flex navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto p-1 mx-5">
-              <li class="nav-item me-3">
-                <a class="nav-link active text-light" aria-current="page" href="{% url 'comercios' %}">Directorio Comercial</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link active dropdown-toggle text-light"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Categorías
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="{% url 'restaurantes' %}">Restaurantes</a></li>
-                  <li><a class="dropdown-item" href="{% url 'Salud' %}">Salud</a></li>
-                  <li><a class="dropdown-item" href="{% url 'Belleza' %}">Belleza</a></li>
-                  <li><a class="dropdown-item" href="{% url 'Entretenimiento' %}">Entretenimiento</a></li>
-                  <li><a class="dropdown-item" href="{% url 'Moda' %}">Moda</a></li>
-                </ul>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="#">Contacto</a>
-              </li> -->
-              <li class="nav-item me-3">
-                <a class="nav-link active text-light" href="{% url 'nosotros' %}">Nosotros</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="nav-link active text-light" href="{% url 'acerca' %}">Acerca de</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="btn btn-primary text-light" style="background-color: #e47310; border: none; border-radius: 4px;" href="{% url 'registro_comercio' %}">Registre su negocio</a>
-              </li>
-            </ul>
-          </div>
+  {% load static %}
+  <nav class="navbar navbar-expand-lg navbar" style="background: linear-gradient(45deg, #07852e, #056421);">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center me-2" href="{% url 'inicio' %}" style="display: flex; align-items: center; text-decoration: none;">
+          <img
+            src="{% static 'media/img/logo2.png' %}"
+            style="width: 80px; height: 80px; margin-right: 10px;"
+          />
+          <span class="text-light" style="font-size: 24px; font-weight: bold; font-family: 'Arial', sans-serif; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">SABANETA 360</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto p-1 mx-5">
+            <li class="nav-item me-3">
+              <a class="nav-link active text-light" href="{% url 'comercios' %}">
+                <i class="fa fa-store"></i> Directorio Comercial
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle text-light"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'restaurantes' %}">Restaurantes</a></li>
+                <li><a class="dropdown-item" href="{% url 'Salud' %}">Salud</a></li>
+                <li><a class="dropdown-item" href="{% url 'Belleza' %}">Belleza</a></li>
+                <li><a class="dropdown-item" href="{% url 'Entretenimiento' %}">Entretenimiento</a></li>
+                <li><a class="dropdown-item" href="{% url 'Moda' %}">Moda</a></li>
+              </ul>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active text-light" href="{% url 'nosotros' %}">Nosotros</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active text-light" href="{% url 'acerca' %}">Acerca de</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="btn btn-primary text-light" style="background-color: #e47310; border: none; border-radius: 4px;" href="{% url 'registro_comercio' %}">Registre su negocio</a>
+            </li>
+          </ul>
         </div>
-      </nav>      
+      </div>
+    </nav>      
 </header>
