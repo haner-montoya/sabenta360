@@ -26,14 +26,15 @@
             <img src="{% static 'media/img/2.jpeg' %}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h1>Sabaneta 360</h1>
-              <p>Sabaneta en un solo lugar</p>
+              <p class="banner-text" 
+            >Sabaneta en un solo lugar</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="{% static 'media/img/4.jpg' %}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h1>Registrate</h1>
-              <p>Registra tu negocio y sé visible para toda la comunidad</p>
+              <p class="text-dark">Registra tu negocio y sé visible para toda la comunidad</p>
             </div>
           </div>
         </div>
@@ -54,8 +55,8 @@
                       <img src="{% static 'media/img/restaurant.jpeg' %}" alt="restaurant" class="card-img-top">
                       <div class="card-body">
                           <h5 class="card-title">Restaurantes</h5>
-                          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non repudiandae maxime vel error itaque quidem dolorum impedit ex explicabo consequatur eius amet eaque tempora quo, ullam laudantium velit consectetur!</p>
-                          <a href="#" class="btn btn-success">Saber más</a> 
+                          <p class="text">Descubre los mejores sabores de Sabaneta en nuestro directorio gastronómico. Desde acogedores cafés hasta restaurantes de alta cocina, aquí encontrarás una diversidad culinaria que hará vibrar tu paladar. ¡Explora opciones deliciosas y apoya el talento local!</p>
+                          <a href="{% url 'restaurantes' %}" class="btn btn-success">Saber más</a> 
                       </div>
                   </div>    
               </div>
@@ -64,8 +65,8 @@
                       <img src="{% static 'media/img/pharmacy.jpg' %}" alt="Farmacias" class="card-img-top">
                       <div class="card-body">
                           <h5 class="card-title">Farmacias</h5>
-                          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non repudiandae maxime vel error itaque quidem dolorum impedit ex explicabo consequatur eius amet eaque tempora quo, ullam laudantium velit consectetur!</p>
-                          <a href="#" class="btn btn-success">Saber más</a>
+                          <p class="text">Tu bienestar es nuestra prioridad. En esta categoría reunimos centros médicos, clínicas, farmacias y especialistas que te ayudarán a cuidar tu salud física y mental. Encuentra fácilmente los servicios que necesitas para mantenerte saludable y lleno de energía.</p>
+                          <a href="{% url 'Salud' %}" class="btn btn-success">Saber más</a>
                       </div>
                   </div>     
               </div>
@@ -74,8 +75,8 @@
                       <img src="{% static 'media/img/moda.jpeg' %}" alt="Tiendas de ropa" class="card-img-top">
                       <div class="card-body">
                           <h5 class="card-title">Tiendas de ropa</h5>
-                          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non repudiandae maxime vel error itaque quidem dolorum impedit ex explicabo consequatur eius amet eaque tempora quo, ullam laudantium velit consectetur!</p>
-                          <a href="#" class="btn btn-success">Saber más</a>
+                          <p class="text">Expresa tu estilo con las tiendas y boutiques de moda que encontrarás en nuestro directorio. <br> <br> Ya sea que busques ropa casual, accesorios o la última tendencia, aquí tienes todo lo necesario para que tu look siempre refleje tu esencia.</p>
+                          <a href="" class="btn btn-success">Saber más</a>
                       </div>
                   </div>      
               </div>
@@ -84,8 +85,8 @@
                     <img src="{% static 'media/img/beauty-2.jpg' %}" alt="Belleza" class="card-img-top">
                       <div class="card-body">
                           <h5 class="card-title">Belleza</h5>
-                          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non repudiandae maxime vel error itaque quidem dolorum impedit ex explicabo consequatur eius amet eaque tempora quo, ullam laudantium velit consectetur!</p>
-                          <a href="{% static 'belleza.html' %}" class="btn btn-success">Saber más</a>
+                          <p class="text">Resalta lo mejor de ti con los expertos en estética y cuidado personal de Sabaneta. Salones de belleza, barberías, spas y centros de bienestar se unen aquí para ofrecerte tratamientos de calidad que te harán sentir y lucir increíble.</p>
+                          <a href="{% url 'Belleza' %}" class="btn btn-success">Saber más</a>
                       </div>
                   </div>     
               </div>
@@ -94,8 +95,8 @@
                       <img src="{% static 'media/img/cine.jpg' %}" alt="Entretenimiento" class="card-img-top">
                       <div class="card-body">
                           <h5 class="card-title">Entretenimiento</h5>
-                          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non repudiandae maxime vel error itaque quidem dolorum impedit ex explicabo consequatur eius amet eaque tempora quo, ullam laudantium velit consectetur!</p>
-                          <a href="#" class="btn btn-success">Saber más</a>
+                          <p class="text">Vive momentos inolvidables con las opciones de entretenimiento que Sabaneta tiene para ofrecerte. Desde cines y teatros hasta parques y eventos culturales, esta categoría es tu puerta de entrada a la diversión para toda la familia.</p>
+                          <a href="{% url 'Entretenimiento' %}" class="btn btn-success">Saber más</a>
                       </div>
                   </div>     
               </div>
