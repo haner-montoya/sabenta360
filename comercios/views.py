@@ -1,9 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, TemplateView
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
+
+from src import settings
 from .models import Comercio
 from .forms import RegistroComercio
+import matplotlib.pyplot as plt
+import os
+
 
 # Create your views here.
 
@@ -83,3 +88,32 @@ class SaludListview(ListView):
         categoria = Comercio.objects.filter(categoria = filtro)
 
         return categoria
+    
+
+class GraficoPageView(TemplateView):
+    template_name = 'comercios/estadistica.html'
+
+    def get(self, request, *args, **kwargs):
+        data = Comercio.objects.all()
+        categorias = ['Restaurantes', 'Salud', 'Belleza', 'Moda', 'Entretenimiento']
+        conteo = [Comercio.objects.filter(categoria=c).count() for c in categorias]
+        # Crear la gráfica
+        
+        plt.figure(figsize=(6,4))
+        plt.bar(categorias, conteo, color=['blue', 'red', 'green', 'purple', 'orange'])
+        plt.xlabel('Categoría')
+        plt.ylabel('Cantidad de Negocios')
+        plt.title('Negocios por Categoría')
+
+        graf = os.path.join(settings.STATICFILES_DIRS[0], 'img')
+        os.makedirs(graf, exist_ok=True)
+
+        img_path = os.path.join(graf, 'conteo_comercios.png')
+        plt.savefig(img_path)
+        plt.close()
+
+
+        return render(request, self.template_name, {'titulog': 'Cantidad de Comercios por Categoría', 'grafica':f'img/conteo_comercios.png'})
+    
+    
+        
