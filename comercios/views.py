@@ -33,6 +33,11 @@ class ComercioListview(ListView):
     model = Comercio
     context_object_name = 'comercios'
 
+    def get_queryset(self):
+        publicados = Comercio.objects.filter(publicado = True)
+
+        return publicados
+    
 
 class RestaurantesListview(ListView):
     template_name = 'comercios/restaurantes.html'
@@ -94,26 +99,33 @@ class GraficoPageView(TemplateView):
     template_name = 'comercios/estadistica.html'
 
     def get(self, request, *args, **kwargs):
-        data = Comercio.objects.all()
+        # Creamos 2 arreglos para los ejes de los gráficos:
         categorias = ['Restaurantes', 'Salud', 'Belleza', 'Moda', 'Entretenimiento']
         conteo = [Comercio.objects.filter(categoria=c).count() for c in categorias]
-        # Crear la gráfica
         
+        # Crear la gráfica
         plt.figure(figsize=(6,4))
-        plt.bar(categorias, conteo, color=['blue', 'red', 'green', 'purple', 'orange'])
+        bars = plt.bar(categorias, conteo, color=['yellow', 'blue', 'red', 'purple', 'orange'])
         plt.xlabel('Categoría')
         plt.ylabel('Cantidad de Negocios')
         plt.title('Negocios por Categoría')
 
-        graf = os.path.join(settings.STATICFILES_DIRS[0], 'img')
+        # Agregar los valores sobre las barras:
+        for bar in bars:
+            yval = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width() / 2, yval, int(yval), ha='center', va='bottom')
+
+        # Creamos el directorio de la gráfica:
+        graf = os.path.join(settings.STATICFILES_DIRS[0], 'media/img/graficas')
         os.makedirs(graf, exist_ok=True)
 
+        # Guardamos la gráfica
         img_path = os.path.join(graf, 'conteo_comercios.png')
         plt.savefig(img_path)
         plt.close()
 
-
-        return render(request, self.template_name, {'titulog': 'Cantidad de Comercios por Categoría', 'grafica':f'img/conteo_comercios.png'})
+        # Nota: El gráfico se rendizará por cada vez que abramos la página:
+        return render(request, self.template_name, {'titulog': 'Cantidad de Comercios por Categoría', 'grafica':f'{graf}/conteo_comercios.png'})
     
     
         

@@ -13,6 +13,8 @@ class Comercio(models.Model):
     telefono = models.CharField(max_length=40)
     email = models.EmailField(unique=True)
     imagen = models.ImageField(upload_to=subir_logo)
+    mapa = models.URLField(max_length=500, null=True)
+    publicado = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = 'Comercio'
@@ -24,7 +26,8 @@ class Comercio(models.Model):
 class SocialMedia(models.Model):
     comercio = models.ForeignKey(Comercio, on_delete = models.CASCADE)
     social_media = models.CharField(choices = Social_Media, max_length=200)
-    estado = models.BooleanField(default=True)
+    url = models.URLField(max_length=200, null=True)
+    estado = models.BooleanField(default=True, verbose_name='¿Activo?')
 
     class Meta:
         verbose_name_plural = 'Redes Sociales'

@@ -15,4 +15,5 @@ class RegistroComercio(forms.ModelForm):
             'telefono': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'imagen': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'mapa': forms.URLInput(attrs={'class': 'form-control'}),
         }
